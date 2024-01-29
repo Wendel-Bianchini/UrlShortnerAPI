@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "20ae05a1-8947-4188-a802-bebb010a9ff6",
+		"name": "UrlShortnerApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18168592"
+	},
+	"item": [
+		{
+			"name": "CreateShortURL",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin132",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"createdBy\": \"WendelBianchini\",\r\n  \"Url\": \"http://google.com\",\r\n  \"shortUrl\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shortUrl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shortUrl"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateShortURL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"createdBy\": \"WendelBianchini\",\r\n  \"Url\": \"http://google.com\",\r\n  \"shortUrl\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shortUrl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shortUrl"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jan 2024 16:15:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 11,\n    \"hits\": 0,\n    \"url\": \"http://google.com\",\n    \"shortUrl\": \"http://chr.dc/lKJVj\",\n    \"createdBy\": \"Admin\",\n    \"createdDate\": \"2024-01-29T16:15:54.8022181+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetUrls",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin132",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"\",\r\n  \"createdBy\": \"WendelBianchini\",\r\n  \"isPrivate\": true,\r\n  \"isProtected\": false,\r\n  \"password\": \"123\",\r\n  \"completeUrl\": \"www.teste.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shortUrl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shortUrl"
+					],
+					"query": [
+						{
+							"key": "createdBy",
+							"value": "Admin",
+							"disabled": true
+						},
+						{
+							"key": "Id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "StartDate",
+							"value": "\"2024-01-28T01:40:07.498689Z\"",
+							"disabled": true
+						},
+						{
+							"key": "EndDate",
+							"value": "\"2024-01-28T01:44:07.498689Z\"",
+							"disabled": true
+						},
+						{
+							"key": "Url",
+							"value": "www.google.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetUrls",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"\",\r\n  \"createdBy\": \"WendelBianchini\",\r\n  \"isPrivate\": true,\r\n  \"isProtected\": false,\r\n  \"password\": \"123\",\r\n  \"completeUrl\": \"www.teste.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shortUrl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shortUrl"
+							],
+							"query": [
+								{
+									"key": "createdBy",
+									"value": "Admin",
+									"disabled": true
+								},
+								{
+									"key": "Id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "StartDate",
+									"value": "\"2024-01-28T01:40:07.498689Z\"",
+									"disabled": true
+								},
+								{
+									"key": "EndDate",
+									"value": "\"2024-01-28T01:44:07.498689Z\"",
+									"disabled": true
+								},
+								{
+									"key": "Url",
+									"value": "www.google.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jan 2024 16:48:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"shortUrl\": \"http://chr.dc/9dtr4\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:17.682387+00:00\",\n        \"url\": \"http://globo.com\"\n    },\n    {\n        \"id\": 2,\n        \"shortUrl\": \"http://chr.dc/aUx71\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.080064+00:00\",\n        \"url\": \"http://google.com\"\n    },\n    {\n        \"id\": 3,\n        \"shortUrl\": \"http://chr.dc/u9jh3\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.099288+00:00\",\n        \"url\": \"http://terra.com.br\"\n    },\n    {\n        \"id\": 4,\n        \"shortUrl\": \"http://chr.dc/qy61p\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.123731+00:00\",\n        \"url\": \"http://facebook.com\"\n    },\n    {\n        \"id\": 5,\n        \"shortUrl\": \"http://chr.dc/87itr\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.142845+00:00\",\n        \"url\": \"http://diariocatarinense.com.br\"\n    },\n    {\n        \"id\": 6,\n        \"shortUrl\": \"http://chr.dc/y81xc\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.15678+00:00\",\n        \"url\": \"http://uol.com.br\"\n    },\n    {\n        \"id\": 7,\n        \"shortUrl\": \"http://chr.dc/qy5k9\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.167188+00:00\",\n        \"url\": \"http://chaordic.com.br\"\n    },\n    {\n        \"id\": 8,\n        \"shortUrl\": \"http://chr.dc/1w5tg\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.177109+00:00\",\n        \"url\": \"http://youtube.com\"\n    },\n    {\n        \"id\": 9,\n        \"shortUrl\": \"http://chr.dc/7tmv1\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.188228+00:00\",\n        \"url\": \"http://twitter.com\"\n    },\n    {\n        \"id\": 10,\n        \"shortUrl\": \"http://chr.dc/9opw2\",\n        \"hits\": 0,\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:18.21117+00:00\",\n        \"url\": \"http://bing.com\"\n    },\n    {\n        \"id\": 11,\n        \"shortUrl\": \"http://chr.dc/lKJVj\",\n        \"hits\": 0,\n        \"createdBy\": \"Admin\",\n        \"createdDate\": \"2024-01-29T16:15:54.802218+00:00\",\n        \"url\": \"http://google.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete URL",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin132",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shortUrl/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shortUrl",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete URL",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/shortUrl/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shortUrl",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jan 2024 17:29:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "\"Url Excluida com sucesso!\""
+				}
+			]
+		},
+		{
+			"name": "Validate URL",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin132",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shortUrl/validar?shortUrl=\"http://chr.dc/9dtr4\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shortUrl",
+						"validar"
+					],
+					"query": [
+						{
+							"key": "shortUrl",
+							"value": "\"http://chr.dc/9dtr4\""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Validate URL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/shortUrl/validar?shortUrl=\"http://chr.dc/9dtr4\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shortUrl",
+								"validar"
+							],
+							"query": [
+								{
+									"key": "shortUrl",
+									"value": "\"http://chr.dc/9dtr4\""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jan 2024 17:28:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"hits\": 1,\n        \"url\": \"http://globo.com\",\n        \"shortUrl\": \"http://chr.dc/9dtr4\",\n        \"createdBy\": \"System\",\n        \"createdDate\": \"2024-01-29T07:07:17.682387+00:00\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

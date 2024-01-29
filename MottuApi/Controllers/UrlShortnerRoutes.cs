@@ -156,7 +156,7 @@ namespace MottuApi.Controllers
             //  "Checks if the provided shortened URL is valid and displays the full URL
             //  if the URL is invalid, the return is null."
             //"You can provide only the 'Shortened URL ID' (tNuZA) or the complete URL (http://chr.dc/tNuZA)."
-            routesURL.MapGet(pattern: "/validar/", handler: async (AppDbContext Context, [AsParameters] VerifyShortUrl criteria, [FromHeader] string? Authorization) =>
+            routesURL.MapGet(pattern: "/validar", handler: async (AppDbContext Context, [AsParameters] VerifyShortUrl criteria, [FromHeader] string? Authorization) =>
             {
                 // Checks if authorization is filled and calls method that validates the parameters.
                 if (Authorization != null && Authorization.StartsWith("Basic"))
@@ -177,6 +177,7 @@ namespace MottuApi.Controllers
                             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
                             criteria.shortUrl = rgx.Replace(criteria.shortUrl, "");
 
+                            criteria.shortUrl = "http://chr.dc/" + criteria.shortUrl;
                             // Validate if exists in DB
                             var Exists = await Context.Urls
                             .AnyAsync(Url => Url.ShortUrl == criteria.shortUrl);
