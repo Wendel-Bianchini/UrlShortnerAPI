@@ -242,3 +242,4 @@ G:\Namespaces\MottuApi\MottuApi\obj\Debug\net8.0\refint\UrlShortnerApi.dll
 G:\Namespaces\MottuApi\MottuApi\obj\Debug\net8.0\UrlShortnerApi.pdb
 G:\Namespaces\MottuApi\MottuApi\obj\Debug\net8.0\UrlShortnerApi.genruntimeconfig.cache
 G:\Namespaces\MottuApi\MottuApi\obj\Debug\net8.0\ref\UrlShortnerApi.dll
+G:\Namespaces\MottuApi\MottuApi\obj\Debug\net8.0\UrlShortnerApi.sourcelink.json
