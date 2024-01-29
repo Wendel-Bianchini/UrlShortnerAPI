@@ -25,7 +25,7 @@ docker compose up csharp_app
 ```
 Como padrão está definida a porta 8080 para chamada da API
 
-As instruções para consumo das APIs estão disposatas no arquivo "Manual_Encurtador" disposto na raiz do projeto.
+As instruções para consumo das APIs estão disposatas no arquivo "Manual_ShortnerUrl.pdf" disposto na raiz do projeto.
 
 ## Made with
 
